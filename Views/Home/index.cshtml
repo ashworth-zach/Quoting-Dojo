@@ -9,6 +9,20 @@
 </head>
 <body>
     <h1 class="jumbotron text-center">Welocome to Quotes</h1>
+    <div class="container">
+        @model Quote
+    <form asp-action="Create" asp-controller="Home" method="post">
+            <p>your name:</p>
+            <span asp-validation-for="name"></span>
+        <label asp-for="name">name</label>
+        <input asp-for="name"><br>
+        <span asp-validation-for="content"></span>
+        <label asp-for="content">content</label>
+        <input asp-for="content"><br>
+        <input value="post quote" type="submit">
+        </form>
 <a href="/quotes">quotes</a>
+
+    </div>
 </body>
 </html>

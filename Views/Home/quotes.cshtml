@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <h1>THESE ARE SOME SUPER NEAT QUOTES!</h1>
     @foreach(var x in ViewBag.Allusers){
-        <p>@x</p>
-        <p>@ViewBag.Allusers</p>
+        <P>"@x["quote"]"</P>
+        <p>-@x["name"] - @x["created_at"]</p>
     }
+    
 </body>
 </html>
